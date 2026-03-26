@@ -5,14 +5,12 @@ Menu = 1
 #Function to control the errors in the input, it receives a prompt and a type, and returns the input converted to the specified type.
 # If the conversion fails, it prints an error message and asks for the input again.
 def errors_control (prompt, type=str):
-    validate = False
-    while validate == False:   
+    validar = "y"
+    while validar:                
         try:
-            validate type(input(prompt))
-            validate = True
+            return type(input(prompt))
         except ValueError:
             print(" Invalid input. Try again.\n")
-    return validate
 #Function to add products to the inventory, it asks for the product name, price and quantity, and stores them in a dictionary
 #This is added to the inventory list. It also asks if the user wants to add another product.
 def add_product():
