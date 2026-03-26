@@ -28,6 +28,15 @@ def show_inventory():
 Price: {products['price']} 
 Quantity: {products['quantity']}""")
          print ("-"*60)
+
+def Calculate_statistics ():
+    if not inventary:
+        print("No products registered.\n")
+    total = 0
+    for products in inventary:
+        total += products['price'] * products['quantity']    
+    return print(f"\nTotal inventory value: {total}\n")
+
 print("""
 ╔════════════════════════════════════════════════════════════╗
         WELCOME TO THE SALES RECORD RIWI STORE!!             
