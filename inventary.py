@@ -20,6 +20,14 @@ def add_product():
                 }
                 inventary.append(products)
                 continuar = input("\nDo you want to add another product? (yes, no): ").lower()
+def show_inventory():
+    if not inventary:
+        print("No purchases recorded.\n")
+    for products in inventary:
+         print(f"""\nProduct: {products['name']} 
+Price: {products['price']} 
+Quantity: {products['quantity']}""")
+         print ("-"*60)
 print("""
 ╔════════════════════════════════════════════════════════════╗
         WELCOME TO THE SALES RECORD RIWI STORE!!             
