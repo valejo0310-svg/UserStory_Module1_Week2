@@ -6,6 +6,20 @@ def errors_control (prompt, type=str):
             return type(input(prompt))
         except ValueError:
             print(" Invalid input. Try again.\n")
+def add_product():
+            continuar = "yes"
+            while continuar != "no":
+                print ("="*60)
+                product_name = errors_control("\nEnter the product name: ")
+                product_price = errors_control("Enter the product price: ", float)
+                producto_quantity = errors_control("Enter the product quantity: ", int)
+                products ={
+                    "name": product_name,
+                    "price": product_price,
+                    "quantity": producto_quantity
+                }
+                inventary.append(products)
+                continuar = input("\nDo you want to add another product? (yes, no): ").lower()
 print("""
 ╔════════════════════════════════════════════════════════════╗
         WELCOME TO THE SALES RECORD RIWI STORE!!             
