@@ -1,3 +1,11 @@
+inventary = []
+Menu = 1
+def errors_control (prompt, type=str):
+    while 9:               
+        try:
+            return type(input(prompt))
+        except ValueError:
+            print(" Invalid input. Try again.\n")
 print("""
 ╔════════════════════════════════════════════════════════════╗
         WELCOME TO THE SALES RECORD RIWI STORE!!             
